@@ -34,6 +34,12 @@ describe("game object contains correct keys", () => {
     test("turnNumber key exists", () => {
         expect("turnNumber" in game).toBe(true);
     });
+    test("turnInProgress key exists", () => {
+        expect("turnInProgress" in game).toBe(true);
+    });
+    test("turnInProgress key value is false", () => {
+        expect(game.turnInProgress).toEqual(false);
+    });
 });
 
 describe("newGame works correctly", () => {
