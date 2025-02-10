@@ -24,4 +24,11 @@ function showScore() {
 }
 
 
-module.exports = { game, newGame, showScore };
+function lightsOn(circ) {
+    document.getElementById(circ).classList.add("light");
+    setTimeout(() => {
+        document.getElementById(circ).classList.remove("light");
+    }, 400);
+}
+
+module.exports = { game, newGame, showScore, addTurn, lightsOn };
